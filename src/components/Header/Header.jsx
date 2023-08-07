@@ -130,11 +130,17 @@ const Header = () => {
                   onClick={toggleProfileActions}
                 >
                   {currentUser ? (
-                    <span onClick={logout}>Logout</span>
+                    <>
+                      <span onClick={logout}>Logout</span>
+                      <button className="dashboard">
+                        <Link to="/dashboard">Dashboard</Link>
+                      </button>
+                    </>
                   ) : (
                     <div className="d-flex align-items-center justify-content-center flex-column">
                       <Link to="/signup">Sign Up</Link>
                       <Link to="/login">Login</Link>
+                      <Link to="/dashboard">Dashboard</Link>
                     </div>
                   )}
                 </div>
